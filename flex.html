@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      outline:1px dotted black;
+
+    }
+    .big{
+      height:50vh;
+      width:100%;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .small{
+      margin:10px;
+      height:100px;
+      width:100px;
+      background:red;
+    }
+
+    .poAb{
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="big">
+      <div class="small"></div>
+
+  </div>
+  <div class="poAb small"></div>
+</body>
+</html>
