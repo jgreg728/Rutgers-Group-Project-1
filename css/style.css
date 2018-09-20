@@ -1,7 +1,38 @@
 body {
   background-image: url()
 }
+body {
+  background-color: brown
+}
 
 .jumbotron {
-  background-image: url("images/RateMyPlateWebsite.png")
+  background-image: url(/Users/johngregorio/Desktop/Rutgers_Coding_Bootcamp/GitHub/Homework/Rutgers-Group-Project-1/images/RateMyPlateWebsite.jpg);
+  image-orientation: from-image;
+  font-display: "Arial", "Arial Bold";
+  color: white;
+}
+
+h1 {
+  background: darkslategray;
+  width: 325px;
+}
+
+.display-4 {
+  background: darkslategray;
+  width: 275px;
+  text-align: center;
+}
+
+.lead {
+  background: darkslategray;
+  width: 250px;
+  text-align: center;
+  position: relative;
+}
+
+.subslogan {
+  background: darkslategray;
+  width: 250px;
+  text-align: center;
+  position: relative;
 }

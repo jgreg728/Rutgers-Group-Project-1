@@ -6,21 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
-  <link rel="stylesheet" href="Rutgers-Group-Project-1/css/style.css">
-  <title>Title</title>
+  <link rel="stylesheet" href="css/style.css">
+  <title>Rate My Plate!</title>
 </head>
 
 <body>
-
+  <!-- HEADER (JUMBOTRON) -->
   <div class="jumbotron">
     <h1 class="display-4">Rate My Plate</h1>
+    <br>
     <p class="lead">An app for your appetite!</p>
     <hr class="my-4">
-    <p>Finding the perfect meal is as easy as typing a food or drink into the Search Bar! Try it out!</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">What is Rate My Plate?</a>
+    <p class="subslogan">Finding the perfect meal is as easy as typing a food or drink into the Search Bar! Try it out!</p>
+    <a class="btn btn-info btn-lg" href="#" role="button">What is Rate My Plate?</a>
   </div>
 
+  <!-- BODY -->
   <div class="container">
     <!-- SEARCH -->
     <div class="row searchDiv">
@@ -36,19 +37,73 @@
     <!-- QUICK LINK BUTTONS -->
     <div class="row">
       <div class="col-sm-4 topFoodDiv">
-        Top 10 Food Searches
+          <button type="button" class="btn btn-info">Top 10 Food Searches</button>
       </div>
       <div class="col-sm-4 topDrinkDiv">
-        Top 10 Drink Searches
+          <button type="button" class="btn btn-info">Top 10 Drink Searches</button>
       </div>
       <div class="col-sm-4 categoryDiv">
-        View some categories...
+          <button type="button" class="btn btn-info">View some categories...</button>
       </div>
     </div>
 
     <br>
 
-    <!-- REVIEW (ONLY APPEARS AFTER SEARCH) -->
+
+
+    <br>
+
+    <!-- RESULT CARDS (THIS IS JUST A DEMO VIEW - CARDS SHOULD ONLY AUTOPOPULATE VIA JQUERY) -->
+    <div class=container reviewDiv>
+      <div class=row>
+        <div class="col-sm-3 card" style="width: 18rem;">
+          <img class="card-img-top" src="https://www.tasteofhome.com/wp-content/uploads/2017/10/exps28800_UG143377D12_18_1b_RMS-696x696.jpg"
+            alt="">
+          <div class="card-body">
+            <h5 class="card-title">Cheeseburgers</h5>
+            <a href="#" class="btn btn-info">More Details...</a>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="col-sm-3 card" style="width: 18rem;">
+          <img class="card-img-top" src="https://www.elementstark.com/woocommerce-extension-demos/wp-content/uploads/sites/2/2016/12/pizza.jpg"
+            alt="">
+          <div class="card-body">
+            <h5 class="card-title">Pizzas</h5>
+            <a href="#" class="btn btn-info">More Details...</a>
+          </div>
+        </div>
+      
+
+      <br>
+
+      <div class="col-sm-3 card" style="width: 18rem;">
+        <img class="card-img-top" src="https://www.thespruceeats.com/thmb/7bIHH4MfaagEQz_Fi6oXZPT8fo4=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/172180127-58a4af835f9b58819cf4fdbd.jpg"
+          alt="">
+        <div class="card-body">
+          <h5 class="card-title">Vanilla Milkshakes</h5>
+          <a href="#" class="btn btn-info">More Details...</a>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="col-sm-3 card" style="width: 18rem;">
+        <img class="card-img-top" src="https://s3.amazonaws.com/finecooking.s3.tauntonclud.com/app/uploads/2017/04/19000521/051136053-01-five-minute-marinated-grilled-skirt-steak-recipe-thumb1x1.jpg"
+          alt="">
+        <div class="card-body">
+          <h5 class="card-title">Skirt Steaks</h5>
+          <a href="#" class="btn btn-info">More Details...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <br>
+
+    <!-- REVIEW (ONLY APPEARS AFTER CLICKING DETAILS BUTTON ON CARD) -->
     <div class="row reviewDiv">
       Review
       <div id="reveiwPic">
@@ -66,9 +121,6 @@
     </div>
 
   </div>
-
-  <br>
-
   <footer>
 
   </footer>
