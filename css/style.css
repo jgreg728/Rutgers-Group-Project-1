@@ -1,4 +1,5 @@
 body {
+<<<<<<< HEAD
   background-color: #293039;
 }
 
@@ -218,4 +219,11 @@ button:hover {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
+=======
+  background-image: url()
+}
+
+.jumbotron {
+  background-image: url("images/RateMyPlateWebsite.png")
+>>>>>>> master
 }
