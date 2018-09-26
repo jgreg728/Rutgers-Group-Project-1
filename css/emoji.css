@@ -1,0 +1,143 @@
+:root {
+  --range: 0%;
+}
+
+body {
+  background: #a52a2a;
+}
+
+.box {
+  width: 200px;
+  height: 95px;
+  background-color: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 .5em;
+  top: 50%;
+  left: 50%;
+}
+
+.title {
+  font-size: 1.3em;
+  color: #293039;
+  padding: .5em 0 0 0;
+}
+
+.rangeSlider {
+  margin: auto;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  height: 10px;
+  border-radius: 50px;
+  background-color: #dcdde1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+.rangeSlider:after {
+  content: '';
+  width: var(--range);
+  height: 100%;
+  border-radius: 50px;
+  background: #293039;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #293039 50%, #293039 75%, #293039 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #293039 50%, #293039 75%, #293039 100%);
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #293039 50%, #293039 75%, #293039 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.showResult.rangeSlider:before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border: 2px solid #293039;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  z-index: 100;
+}
+
+.rangeSlider::-webkit-slider-thumb {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  background-image: url('../images/plate.png');
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  position: relative;
+  -webkit-appearance: none;
+}
+
+.rangeSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border: 0;
+  background-image: url('');
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.thumbChanged.rangeSlider::-webkit-slider-thumb {
+  background-image: url('');
+  background-size: cover;
+}
+
+.thumbChanged.rangeSlider::-moz-range-thumb {
+  background-image: url('');
+  background-size: cover;
+}
+
+.emoji {
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/plateEmoji.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -60px;
+  left: 0%;
+  transition: all .3s;
+  animation: move-emoji 5s infinite alternate;
+  opacity: 0;
+}
+
+.emoji-hide {
+  animation: hide-emoji .3s ease-out;
+}
+
+@keyframes move-emoji {
+  0% {
+    transform: translateY(-5px)
+  }
+  100% {
+    transform: translateY(5px)
+  }
+}
+
+@keyframes hide-emoji {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50%);
+    opacity: .5;
+  }
+  100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}

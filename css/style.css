@@ -1,6 +1,6 @@
 body {
-<<<<<<< HEAD
-  background-color: #293039;
+  /* /* background-color: #a52a2a  */
+  background-color: #a52a2a;
 }
 
 #navbarNav {
@@ -30,20 +30,23 @@ body {
 }
 
 .container {
-  color: #e67c33;
+  color: #a52a2a;
   background-color:#293039;
 }
 
-.checked {
-  color: orange;
-}
-
-.card {
-display: inline-table;
+.card{
+display: inline-block;
+position: static;
+text-align: center;
 box-align: center;
 margin: 10px;
-width: 15%;
+width: 22%;
 padding: 5px;
+
+}
+
+.slidecontainer {
+ 
 }
 
 .about {
@@ -219,11 +222,107 @@ button:hover {
   .cancelbtn, .signupbtn {
     width: 100%;
   }
-=======
-  background-image: url()
 }
 
-.jumbotron {
-  background-image: url("images/RateMyPlateWebsite.png")
->>>>>>> master
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background-color:#a52a2a;
+  background: url("../images/plate.png");
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 25px;
+  border: 0;
+  background: url("../images/plate.png");
+  cursor: pointer;
+}
+
+
+.aboutBanner {
+  background-image: url(../images/webBanner.png);
+  background-size: cover;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.bowlImage {
+width: 100%;
+max-width: 500px;
+}
+
+.backstoryImage {
+width: 100%;
+max-width: 500px;
+}
+
+.contactBanner {
+  background-image: url(../images/webBanner.png);
+  background-size: cover;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.burgerImage {
+width: 100%;
+max-width: 500px;
+}
+
+.addressImage {
+width: 100%;
+max-width: 500px;
+}
+
+.reviewsBanner {
+  background-image: url(../images/reviewsBackground.png);
+  background-size: cover;
+  height:50vh;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.big{
+  width:100%;
+  height: 100%;
+  background-image: url(../images/reviewsBackground.png);
+  /* background-size: cover; */
+}
+
+.small{
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  width:80%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 10%;
+}
+.review1, .review2, .review3{
+  height:500px;
+  width:440px;
+  max-width:500px;
+}
+.review1{
+  background-image: url(../images/chef.png);
+}
+.review2{
+ background-image: url(../images/chef.png);
+}
+.review3{
+ background-image: url(../images/chef.png);
 }

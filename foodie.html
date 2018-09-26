@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+<link rel="stylesheet" href="style.css">
+<title>Title</title>
+<style>
+ *{
+   outline:1px solid black;
+     }
+     .big{
+     width:100%;
+     background-color:#e67c33;
+   }
+ .small{
+   width:90%;
+   margin-left:5%;
+   background-color: white;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around
+ }
+ .red, .blue, .green{
+   height:400px;
+   width:100%;
+   max-width:500px;
+ }
+ .red{
+   background-image: url(images/chef.png);
+ }
+ .blue{
+  background-image: url(images/chef.png);
+ }
+ .green{
+  background-image: url(images/chef.png);
+ }
+ /*media(max-width:1000px){
+   .green{
+     background-color:blueviolet;
+   }
+ }
+ @media(max-width:500px){
+   .red{
+     background-color:orange;
+   }
+ }*/
+</style>
+</head>
+<body>
+
+ <div class="big">
+   <div class="small">
+       <div class="red"></div>
+       <div class="blue"></div>
+       <div class="green"></div>
+   </div>
+ </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
