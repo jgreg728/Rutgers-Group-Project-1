@@ -1,0 +1,68 @@
+.container {
+    /* /* background-size: cover; */
+  max-width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; */
+}
+
+.card {
+  max-width: 1150px;
+}
+
+.card-body {
+  background-color: brown;
+  padding: 10px;
+}
+
+foodPicDiv {
+  background-color: #293039;
+  padding: 15px;
+  margin: 10px;
+}
+
+.card-header {
+  font-family: "Langdon";
+  background-color: black;
+  color: #293039;
+  font-size: 400%;
+}
+
+.descriptionDiv {
+  color: white;
+  background-color: #293039;
+  padding: 15px;
+}
+
+.reviewDiv {
+  color: white;
+  background-color: #293039;
+  padding: 15px;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Langdon";
+  background-color: #293039;
+  text-decoration: underline;
+  font-size: 200%;
+}
+
+h3 {
+  text-align: left;
+  font-family: "Arial Black", "Haettenschweiler", "Arial Narrow Bold", "sans-serif";
+  font-size: auto;
+}
+
+.mouthfeelDiv {
+  border-color: brown;
+  color: white;
+  background-color: #293039;
+}
+
+.googleMapDiv {
+  background-color: #293039;
+  border-color: brown;
+  color: white;
+}

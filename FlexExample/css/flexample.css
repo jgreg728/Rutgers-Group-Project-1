@@ -1,0 +1,22 @@
+.aboutBanner {
+  background-color: brown;
+  background-size: cover;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.bowlImage {
+/* width: 25%; */
+max-width: 500px;
+}
+
+.backstoryImage {
+/* width: 25%; */
+max-width: 500px;
+}
+
+
+

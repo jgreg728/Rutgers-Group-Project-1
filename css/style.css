@@ -142,6 +142,9 @@ p {
   height: 100px;
 padding-top: 20px;
 }
+body {
+  background-color: brown
+}
 
 #career-row {
   border-radius: 5px;
