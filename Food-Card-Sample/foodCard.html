@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <link rel="stylesheet" href="css/styleFood.css">
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="javascript/googleMap.js"></script>
+  <title>Title</title>
+</head>
+
+<body>
+
+  <!-- CARD -->
+  <div class="container text-center mt-4">
+    <div class="card rounded">
+      <div class="card-header">
+        [Food or Drink Item Here]
+      </div>
+      <div class="card-body">
+
+        <!-- TOP HALF OF CARD -->
+        <div class="row">
+          <div class="col-12 col-md-6 rounded">
+            <div class="foodPicDiv rounded">
+              <!-- REPLACE BELOW WITH EMPTY DIV FOR API RESULTS-->
+              <img class="card-img" src="https://via.placeholder.com/500x500"
+              height=500px width=500px alt="Cheeseburger">
+            </div>
+          </div>
+          <div class="col-12 col-md-6 rounded">
+            <div class="descriptionDiv rounded">
+              <!-- REPLACE BELOW WITH EMPTY DIV FOR API RESULTS-->
+              <h3>[Insert Description]</h3>
+            </div>
+            <br>
+            <div class="reviewDiv rounded">
+              <h1>Reviews</h1>
+              <!-- REPLACE BELOW WITH EMPTY DIV FOR API RESULTS-->
+              <h3> </h3>
+              <button type="button" class="btn btn-light reviewButton"><strong>Click For Full Review</strong></button>
+            </div>
+            <br>
+            <div class="mouthfeelDiv rounded">
+                <h1>Mouthfeel</h1>
+                <!-- REPLACE BELOW WITH EMPTY DIV FOR API RESULTS-->
+                <h3> </h3>
+              </div>
+          </div>
+        </div>
+        <br>
+        <br>
+
+        <!-- BOTTOM HALF OF CARD -->
+        <div class="row rounded">
+          <div class="col-12 col-md-6 p-3 rounded">
+            <div class="mouthfeelDiv rounded">
+              <h1>Location</h1>
+              <!-- REPLACE BELOW WITH EMPTY DIV FOR API RESULTS-->
+            </div>
+          </div>
+          <br>
+          <div class="col-12 col-md-6 p-3">
+          <!-- **GOOGLE MAP** -->
+            <div class="googleMapDiv rounded">
+              <h1>Map</h1>
+              <!-- REPLACE BELOW WITH EMPTY DIV FOR API RESULTS-->
+              <iframe class="rounded" width="500" height="450" frameborder="0" style="border:0"
+              src="https://www.google.com/maps/embed/v1/search?q=...&key=AIzaSyC4qqzQDK5EBDnnZSdJzedGT9OZKI3LCZo" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
