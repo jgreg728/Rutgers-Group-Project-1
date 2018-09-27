@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
   <link rel="stylesheet" href="css/style.css">
 
-  <title>YELP</title>
+  <title>Rate My Plate</title>
 
 
 </head>
@@ -41,7 +41,40 @@
     </div>
   </nav>
 
+  <div class="container mt-4 customer-container text-center">
 
+
+
+
+      <div class='card d-inline-block  noborder m-3' style='width: 18rem'>
+        <img src="images/manager.jpg">
+        <div class="customer-text mt-2">
+          <p>"Customer satisfaction is of the utmost importance for a restaurant manager, and now that I know exactly how my customers feel about our selections, I can work even harder to preserve a high reputation for our guests!"<br><br><em>Mark F.</em></p>
+        </div>
+      </div>
+
+
+      <div class='card d-inline-block noborder m-3' style='width: 18rem'>
+        <img src="images/chef.jpg">
+        <div class="customer-text mt-2">
+            <p>"As a chef, I take a great deal of pride in my food. Not only the taste of it, but the texture, presentation and <em>Mouthfeel</em> of each dish. Rate My Plate keeps my staff honest, guaranteeing a quality product every single time." <br><br><em>John G.</em></p>
+
+        </div>
+      </div>
+
+
+      <div class='card d-inline-block noborder m-3' style='width: 18rem'>
+        <img src="images/customer.jpg">
+        <div class="customer-text mt-2">
+            <p>"Foodies rejoice! This is the app we've all been waiting for! We can now explore and find the best dishes and drinks around, all at the click of a button. Hmmm, I wonder what spot my friends and I should try next..."<br><br><em>Chehlsee C.</em></p>
+
+        </div>
+      </div>
+
+
+
+
+</div>
 
 
   <div class="container mt-4">
@@ -270,40 +303,7 @@
 
 
 
-  <div class="container mt-4 customer-container text-center">
 
-
-
-
-        <div class='card d-inline-block  noborder m-3' style='width: 18rem'>
-          <img src="images/manager.jpg">
-          <div class="customer-text mt-2">
-            <p>"Customer satisfaction is of the utmost importance for a restaurant manager, and now that I know exactly how my customers feel about our selections, I can work even harder to preserve a high reputation for our guests!"<br><br><em>Mark F.</em></p>
-          </div>
-        </div>
-
-
-        <div class='card d-inline-block noborder m-3' style='width: 18rem'>
-          <img src="images/chef.jpg">
-          <div class="customer-text mt-2">
-              <p>"As a chef, I take a great deal of pride in my food. Not only the taste of it, but the texture, presentation and <em>Mouthfeel</em> of each dish. Rate My Plate keeps my staff honest, guaranteeing a quality product every single time." <br><br><em>John G.</em></p>
-
-          </div>
-        </div>
-
-
-        <div class='card d-inline-block noborder m-3' style='width: 18rem'>
-          <img src="images/customer.jpg">
-          <div class="customer-text mt-2">
-              <p>"Foodies rejoice! This is the app we've all been waiting for! We can now explore and find the best dishes and drinks around, all at the click of a button. Hmmm, I wonder what spot my friends and I should try next..."<br><br><em>Chehlsee C.</em></p>
-
-          </div>
-        </div>
-
-
-
-
-  </div>
 
 </div>
 
@@ -335,8 +335,8 @@
 
     function apiCall(searchItems) {
 
-      var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + "sushi" + "&location=" + "toms+river" + "&radius=" + 10000 + "&limit=" + 10 + "&price=" + 2;
-      //var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + searchItems.keyword + "&location=" + searchItems.location + "&radius=" + searchItems.radiusSelected + "&limit=" + searchItems.resultsSelected + "&price=" + searchItems.priceSelected;
+      //var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + "sushi" + "&location=" + "toms+river" + "&radius=" + 10000 + "&limit=" + 10 + "&price=" + 2;
+      var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + searchItems.keyword + "&location=" + searchItems.location + "&radius=" + searchItems.radiusSelected + "&limit=" + searchItems.resultsSelected + "&price=" + searchItems.priceSelected;
 
       $.ajax({
         url: queryURL,
@@ -347,7 +347,7 @@
         }
       }).then(function (response) {
 
-        // console.log(response)
+        console.log(response)
 
         for (var i = 0; i < response.businesses.length; i++) {
           var name = response.businesses[i].name;
@@ -360,7 +360,7 @@
           var price = response.businesses[i].price;
           var distance = response.businesses[i].distance;
 
-          for (var j = 0; j < 2; j++) {
+          for (var j = 0; j < categories; j++) {
             categoriesArray.push(categories[j].title);
           }
 
@@ -417,7 +417,7 @@
 
       $("#submit-search").on("click", function () {
 
-
+        $("#store-results").text("")
 
         event.preventDefault();
 
