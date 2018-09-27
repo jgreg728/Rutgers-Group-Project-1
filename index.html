@@ -2,183 +2,510 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
   <link rel="stylesheet" href="css/style.css">
-  <!-- <link rel="stylesheet" href="css/emoji.css"> --> 
-  <title>Title</title>
+
+  <title>YELP</title>
+
+
 </head>
 
 <body>
 
-  <div class="jumbotron">
-    <img src="images/logo.png" />
-    <!-- <h1 class="display-4">Rate My Plate</h1> -->
-    <!-- <p class="lead">An app for your appetite!</p>
-    <hr class="my-4">
-    <p>Finding the perfect meal is as easy as typing a food or drink into the Search Bar! Try it out!</p>
-    <a class="btn btn-primary btn-lg" href="#" role="button">What is Rate My Plate?</a> -->
+  <div class="jumbotron mb-0">
+    <img id='main-logo' src="images/logo.png">
   </div>
 
-  <nav>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
-        aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="aboutUs.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-          <!-- <li class="nav-item"> -->
-          <!-- <a class="nav-link" href="login.html">Login</a> -->
-          <!-- <li class="nav-item"> -->
-          <!-- <a class="nav-link" href="signup.html">Become Plated Verified</a> -->
-          <!-- </li> -->
-          <!-- </li> -->
-        </ul>
-      </div>
-    </nav>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="aboutUs.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+    </div>
   </nav>
-  <br>
-  <br>
-  <div class="container">
-    <!-- SEARCH -->
-    <div class="row searchDiv">
-      <div class="col-sm-12">
-        <input type="search" class="form-control ds-input" id="search-input" placeholder="Search..." autocomplete="off"
-          data-docs-version="4.1" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false"
-          aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;">
-      </div>
-    </div>
 
-    <br>
 
-    <!-- QUICK LINK BUTTONS -->
+
+
+  <div class="container mt-4">
     <div class="row">
-      <div class="col-sm-4 topFoodDiv">
-        Top 10 Food Searches
-      </div>
-      <div class="col-sm-4 topDrinkDiv">
-        Top 10 Drink Searches
-      </div>
-      <div class="col-sm-4 categoryDiv">
-        View some categories...
-      </div>
-    </div>
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header bg-dark text-light">
+            Search for your most recent destination and rate your plate!
+          </div>
+          <div class="card-body">
+            <form id="search-form">
 
-    <br>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="keyword">Keyword:</label>
+                  <input type="text" class="form-control" id="keyword" aria-describedby="keyword" placeholder="Sushi, Appetizers, Drinks, Italian">
+                </div>
 
-    <!-- REVIEW (ONLY APPEARS AFTER SEARCH) -->
-    <div class="row reviewDiv">
-      Review
-      <div id="reveiwPic">
-        [Picture goes here]
-      </div>
+                <div class="col-md-6 mb-3">
+                  <label for="location">Location:</label>
+                  <input type="text" class="form-control" id="location" aria-describedby="location" placeholder="New York, NY">
+                </div>
+              </div>
 
-      <div id="reveiwContentDiv">
-        [Review Stats go here]
-      </div>
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="radius">Radius from location:</label><br>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radius" id="radius" value="8046.72">
+                    <label class="form-check-label" for="inlineRadio2">5 mi.</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radius" id="radius" value="16093.4">
+                    <label class="form-check-label" for="inlineRadio2">10 mi.</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radius" id="radius" value="24140.2">
+                    <label class="form-check-label" for="inlineRadio2">15 mi.</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="radius" id="radius" value="32186.9">
+                    <label class="form-check-label" for="inlineRadio2">20 mi.</label>
+                  </div>
 
-      <div id="locationDiv">
-        [Google Map info goes here]
-      </div>
+                </div>
 
-    </div>
-  </div>
+                <div class="col-md-4 mb-3">
+                  <label for="results-limit">Results Limit:</label><br>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="results" id="results" value="10">
+                    <label class="form-check-label" for="inlineRadio1">10</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="results" id="results" value="20">
+                    <label class="form-check-label" for="inlineRadio2">20</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="results" id="results" value="30">
+                    <label class="form-check-label" for="inlineRadio2">30</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="results" id="results" value="40">
+                    <label class="form-check-label" for="inlineRadio2">40</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="results" id="results" value="50">
+                    <label class="form-check-label" for="inlineRadio2">50</label>
+                  </div>
+                </div>
 
-  <!--card Container-->
-  <!--<div class="row">
-    <div class="col-lg-4 col-md-3 col-sm-6">
+                <div class="col-md-4 mb-3">
+                  <label for="price">Price:</label><br>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="price" id="price" value="1">
+                    <label class="form-check-label" for="inlineCheckbox1">$</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="price" id="price" value="2">
+                    <label class="form-check-label" for="inlineCheckbox2">$$</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="price" id="price" value="3">
+                    <label class="form-check-label" for="inlineCheckbox1">$$$</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="price" id="price" value="4">
+                    <label class="form-check-label" for="inlineCheckbox2">$$$$</label>
+                  </div>
+                </div>
+              </div>
 
-  <div class="card"> 
-    <img class="card-img-top" src="images/logo.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
+              <div class="form-row col-12">
+                <button type="submit" class="btn btn-block btn-outline-success" id="submit-search">Submit</button>
+              </div>
 
-      slider container
-        <div class="slidecontainer">
-          <input type="range" min="1" max="5" value="50" class="slider" id="myRange">
+              <div class="row mt-3">
+                <div class="col-12 text-center p-0" id="store-results">
+                </div>
+
+            </form>
+
+
+            </div>
+          </div>
         </div>
 
-        <div class="card-body">
-          <a href="cardFullView.html" class="card-link">See More</a>
-          <a href="#" class="card-link">Another link</a>
+        <div class="col-12">
+
+          <div class="row card-body">
+
+
+          </div>
         </div>
-  </div>
-  </div>
-   </div> -->
-
-
-
-  <!--slider container
-                                  <div class="slidecontainer">
-                                    <input type="range" min="1" max="5" value="50" class="slider" id="myRange">
-                                  </div>-->
-
-  <!--plate emoji for rating
-                                  <img class="card-img-top" src="images/plateEmoji.png" alt="Plate emjoi rating system">-->
-
-  <!-- emoji slider
-                                  <ul class="list-group list-group-flush"></ul>
-                                  <div class="box">
-                                      <div class="emoji"></div>
-                                      <span class="title">Rate Your Plate!</span>
-                                      <input type="range" class="rangeSlider" value="5">
-                                    </div> -->
-
-  <!-- <div class="about"> -->
-  <!-- <img src="images/about.png" alt="About" class="responsive" /> -->
-  <!-- </div> -->
-
-
-  <!--star rating-->
-  <!-- Add icon library 
-              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-              
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-            
-              <span class="fa fa-star"></span></li> -->
-  <br>
-  <br>
-  <div class="big">
-    <div class="small">
-      <div class="review1"></div>
-      <div class="review2"></div>
-      <div class="review3"></div>
+      </div>
     </div>
+
+
+    <div class="container text-center pt-3" id="review-section"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="submit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+      <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Review Submission</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+
+            <form id="search-form">
+
+              <div class="form-group">
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="submit-item-category" id="submit-item-category" value="food" required>
+                  <label class="form-check-label" for="food">Food</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="submit-item-category" id="submit-item-category" value="drink" required>
+                  <label class="form-check-label" for="drink">Drink</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="submit-item-name">Item Name:</label>
+                <input type="text" class="form-control" id="submit-item-name" aria-describedby="submit-item-name" placeholder="JD Burger, Shrimp Tempura Roll, Chicken Piccatta Pasta"
+                  required>
+              </div>
+
+              <div class="form-group">
+                <label for="submit-item-rating">Rating:</label><br>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="1" required>
+                  <label class="form-check-label" for="inlineRadio1">1 (Worst)</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="2" required>
+                  <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="3" required>
+                  <label class="form-check-label" for="inlineRadio2">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="4" required>
+                  <label class="form-check-label" for="inlineRadio2">4 (Best)</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="submit-item-description">Basic Description:</label>
+                <textarea class="form-control" id="submit-item-description" rows="3" placeholder="Provide a short description of the item."
+                  required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="submit-item-review">Personal Review:</label>
+                <textarea class="form-control" id="submit-item-review" rows="3" placeholder="Give a detailed review on the item." required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="mouthfeel-options">Mouthfeel options (Choose 3):<br>
+                  <em id="caption">Hold CTRL or CMD to select multiple</em></label>
+                <select multiple class="form-control" id="mouthfeel-options" required>
+                  <option value="Salty">Salty</option>
+                  <option value="Crunchy">Crunchy</option>
+                  <option value="Mild">Mild</option>
+                  <option value="Moist">Moist</option>
+                  <option value="Tart">Tart</option>
+                  <option value="Sweet">Sweet</option>
+                  <option value="Bland">Bland</option>
+                  <option value="Hot">Hot</option>
+                  <option value="Warm">Warm</option>
+                  <option value="Savory">Savory</option>
+                  <option value="Complex">Complex</option>
+                  <option value="Simple">Simple</option>
+                  <option value="Strong">Strong</option>
+                  <option value="Juicy">Juicy</option>
+                  <option value="Sour">Sour</option>
+                </select>
+              </div>
+
+              <div class="form-group mb-0">
+                <input id="file-upload" type="file" multiple onchange="processSelectedFiles(this)">
+              </div>
+
+            </form>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-block btn-outline-success" data-dismiss="modal" id="submit-item-form">Submit</button>
+            <button type="reset" class="btn btn-block btn-outline-danger mt-0" id="clear-item-form">Clear</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  <div class="container mt-4 customer-container text-center">
+
+
+
+
+        <div class='card d-inline-block  noborder m-3' style='width: 18rem'>
+          <img src="images/manager.jpg">
+          <div class="customer-text mt-2">
+            <p>"Customer satisfaction is of the utmost importance for a restaurant manager, and now that I know exactly how my customers feel about our selections, I can work even harder to preserve a high reputation for our guests!"<br><br><em>Mark F.</em></p>
+          </div>
+        </div>
+
+
+        <div class='card d-inline-block noborder m-3' style='width: 18rem'>
+          <img src="images/chef.jpg">
+          <div class="customer-text mt-2">
+              <p>"As a chef, I take a great deal of pride in my food. Not only the taste of it, but the texture, presentation and <em>Mouthfeel</em> of each dish. Rate My Plate keeps my staff honest, guaranteeing a quality product every single time." <br><br><em>John G.</em></p>
+
+          </div>
+        </div>
+
+
+        <div class='card d-inline-block noborder m-3' style='width: 18rem'>
+          <img src="images/customer.jpg">
+          <div class="customer-text mt-2">
+              <p>"Foodies rejoice! This is the app we've all been waiting for! We can now explore and find the best dishes and drinks around, all at the click of a button. Hmmm, I wonder what spot my friends and I should try next..."<br><br><em>Chehlsee C.</em></p>
+
+          </div>
+        </div>
+
+
+
+
   </div>
-  <br>
+
+</div>
+
+  <div class="container-fluid footer">
+    <p>Rate My Plate</p>
+    <p>&copy; Copyright 2018</p>
+  </div>
 
 
 
-</body>
-<footer>
 
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
-<script src="js/slider.js"></script>
-<script src="js/emoji.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-storage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script src="./js/firebaseReviews.js"></script>
+
+  <script type="text/javascript">
+
+
+    var reviewIdCount = 0;
+    var currentSelection = {}
+
+
+
+    function apiCall(searchItems) {
+
+      var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + "sushi" + "&location=" + "toms+river" + "&radius=" + 10000 + "&limit=" + 10 + "&price=" + 2;
+      //var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + searchItems.keyword + "&location=" + searchItems.location + "&radius=" + searchItems.radiusSelected + "&limit=" + searchItems.resultsSelected + "&price=" + searchItems.priceSelected;
+
+      $.ajax({
+        url: queryURL,
+        method: "GET",
+        headers: {
+          "Authorization": "Bearer 2VxyWI6FPmn6irj6VKvlO6GWV0pNBEf5Efh89Mki_C5OmrAlqtY4kLYhkrsnKnm2U6vqZHq5a8Yh1hHu4FfcNHVej_aYkyeXI9xEMqzr-KQ0_EAU-EhBaQy4NIeiW3Yx",
+          "Access-Control-Allow-Origin": "*"
+        }
+      }).then(function (response) {
+
+        // console.log(response)
+
+        for (var i = 0; i < response.businesses.length; i++) {
+          var name = response.businesses[i].name;
+          var address = response.businesses[i].location.display_address[0];
+          var cityOnly = response.businesses[i].location.city;
+          var stateOnly = response.businesses[i].location.state;
+          var zipOnly = response.businesses[i].location.zip_code;
+          var categories = response.businesses[i].categories;
+          var categoriesArray = [];
+          var price = response.businesses[i].price;
+          var distance = response.businesses[i].distance;
+
+          for (var j = 0; j < 2; j++) {
+            categoriesArray.push(categories[j].title);
+          }
+
+          var $restaurantDiv = $("<div class='card d-inline-block m-1' style='width: 16rem;'>");
+          var $cardBodyText = $("<div class='card-body card-text p-2 mb-3' id='rest-card-text'>");
+          var $cardBodyButton = $("<div class='card-body card-button text-center pt-0'>");
+
+          var $name = $("<h5 class='card-title text-center mb-0' id='store-name'>").text(name);
+          var $address = $("<p class='card-text'>").text(address);
+          var $city = $("<p class='card-text'>").text(cityOnly + ", " + stateOnly + " " + zipOnly);
+          var $categoriesArray = $("<p class='card-text'>").text(categoriesArray.join(", "));
+          var $price = $("<p class='card-text'>").text(price);
+          var $distance = $("<p class='card-text'>").text(metersToMiles(distance) + " miles");
+          var $reviewButton = $("<button type='button' class='btn btn-secondary btn-sm btn-block' id='review-button' data-toggle='modal' data-target='#submit-modal'>Submit Review!</button>");
+
+          $($cardBodyText).append($name, $address, $city, $categoriesArray, $price, $distance);
+          $($cardBodyButton).append($reviewButton);
+          $($restaurantDiv).append($cardBodyText, $cardBodyButton);
+          $("#store-results").append($restaurantDiv);
+        }
+
+        function metersToMiles(meters) {
+          var m = parseFloat(meters);
+          var mi = "";
+          if (!isNaN(m)) {
+            mi = Math.round((m * 0.00062137119) * 10) / 10;
+          }
+          return mi;
+        }
+      });
+    }
+
+
+    function processSelectedFiles(fileInput) {
+      var file = fileInput.files[0];
+      // Get a reference to the location where we'll store our photos
+
+      photoRef = firebase.storage().ref().child('photos').child(file.name);
+      // Upload file to Firebase Storage
+
+      var uploadTask = photoRef.put(file).then(function (snapshot) {
+        console.log('Uploaded a blob or file!');
+      });
+
+    }
+
+
+
+    $(document).ready(function () {
+
+      $("#clear-search").click(function (event) {
+        $("#store-results").text("");
+      });
+
+      $("#submit-search").on("click", function () {
+
+
+
+        event.preventDefault();
+
+        var priceSelectedArray = [];
+        $("input:checkbox[name='price']:checked").each(function (i) {
+          priceSelectedArray[i] = $(this).val();
+        })
+
+        var searchItems = {
+          keyword: $("#keyword").val(),
+          location: $("#location").val(),
+          radiusSelected: Math.floor($("input:radio[name='radius']:checked").val()),
+          resultsSelected: $("input:radio[name='results']:checked").val(),
+          priceSelected: priceSelectedArray
+        }
+
+        apiCall(searchItems);
+
+      })
+
+      $(document).on("click", "#review-button", function () {
+        currentSelection = {};
+
+
+        currentSelection.restaurant = $(this).parent().parent()[0].childNodes[0].children[0].innerHTML
+        currentSelection.cityState = $(this).parent().parent()[0].childNodes[0].children[2].innerHTML.replace(/[0-9]/g, '').trim();
+      })
+
+      $("#submit-item-form").on("click", function (event) {
+
+        event.preventDefault();
+
+        var itemName = $("#submit-item-name").val().trim();
+        var foodDrink = $("input:radio[name='submit-item-category']:checked").val();
+        var rating = $("input:radio[name='submit-item-rating']:checked").val();
+        var description = $("#submit-item-description").val()
+        var review = $("#submit-item-review").val().trim();
+        var mfOptions = $("#mouthfeel-options").val();
+
+        //database
+        currentSelection.review = review,
+          currentSelection.description = description,
+          currentSelection.foodDrink = foodDrink,
+          currentSelection.reviewID = reviewIdCount,
+
+          //for the card
+          currentSelection.itemName = itemName,
+          currentSelection.options = mfOptions.join(", "),
+          currentSelection.rating = rating,
+
+
+
+
+          photoRef.getDownloadURL().then(function (url) {
+            currentSelection.url = url
+            database.ref().push(currentSelection);
+          })
+
+        // reviewIdCount++;
+        // console.log(reviewIdCount)
+
+
+        $('input[name="submit-item-category"]').prop('checked', false);
+        $('input[name="submit-item-rating"]').prop('checked', false);
+        $("#submit-item-name").val("");
+        $("#submit-item-description").val("");
+        $("#submit-item-review").val("");
+        $("#mouthfeel-options").val("");
+        $("#file-upload").val("");
+
+
+
+      });
+
+      $("#clear-item-form").on("click", function () {
+        $('input[name="submit-item-category"]').prop('checked', false);
+        $('input[name="submit-item-rating"]').prop('checked', false);
+        $("#submit-item-name").val("");
+        $("#submit-item-description").val("");
+        $("#submit-item-review").val("");
+        $("#mouthfeel-options").val("");
+        $("#file-upload").val("");
+      })
+
+    });
+
+  </script>
+
 </body>
 
 </html>
