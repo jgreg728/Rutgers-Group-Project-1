@@ -1,16 +1,34 @@
-body {
+/* --------------- All --------------- */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: #a52a2a;
+  font-family: 'Montserrat', sans-serif;
 }
+
+a {
+  color: white;
+}
+
+p {
+  margin: 0;
+}
+
+.zeroBorder {
+  border: none;
+}
+
+
+/* -------------- Index -------------- */
+
+/* Jumbotron */
 
 #main-logo {
   height: auto;
   width: 350px;
   min-width: 150px;
-}
-
-#navbarNav {
-  margin: 10px 0px 10px 0px;
-
 }
 
 .jumbotron {
@@ -25,62 +43,65 @@ body {
   margin: 0 auto;
 }
 
-.aboutBanner {
-  background-image: url(../images/webBanner.png);
-  background-size: cover;
-  width:100%;
-  display:flex;
-  justify-content: center;
-  align-items:center;
-  flex-wrap:wrap;
+
+/* Navbar */
+
+#navbarNav {
+  margin: 10px 0px 10px 0px;
+
 }
 
-.contactBanner {
-  background-image: url(../images/webBanner.png);
-  background-size: cover;
-  width:100%;
-  display:flex;
-  justify-content: center;
-  align-items:center;
-  flex-wrap:wrap;
+
+/* Chef/Manager/Foodie Display */
+
+.customer-container {
+  background-color: white;
+  border-radius: 5px;
 }
 
-#card-rest-text {
-  font-style: italic;
+.customer-text {
   font-size: 0.9rem;
 }
 
-#card-review-text {
-  height: 75px;
-}
 
-.mf-chart {
-  text-align: center;
-}
+/* Search and Restaurant Cards */
 
-img {
-  width: 75%;
-  height: auto;
-}
-
-p {
-  margin: 0;
-}
-
-#caption {
-  font-size: 0.9rem;
-}
-
-#store-name, #rest-card-text {
+#store-name, 
+#rest-card-text {
   font-size: 1rem;
-  
 }
 
 #store-name {
   height: 45px;
+  font-weight: bold;
 }
 
 #rest-card-text {
+  font-size: 0.9rem;
+}
+
+.form-check-inline {
+  margin-right: 10px;
+}
+
+#submit-search {
+  margin-top: 15px;
+}
+
+
+
+/* Mini-Cards */
+
+#card-rest-text {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+#card-review-text {
+  height: 75px;
+  font-size: 0.9rem;
+}
+#caption {
   font-size: 0.9rem;
 }
 
@@ -94,9 +115,8 @@ p {
   overflow: auto;
 }
 
-
-
-#review-icon {
+#review-icon, 
+#ex-review-icon {
   height: 42px;
   width: 42px;
 }
@@ -108,26 +128,80 @@ p {
   overflow: auto;
 }
 
-#review-card:hover {
+#review-card:hover, 
+#rest-card:hover  {
   border: 2px solid #a52a2a;
-
 }
 
-.customer-container {
-  background-color: white;
-  border-radius: 5px;
+
+/* Extended-Cards Modal */
+
+.card-title {
+  font-size: 1.2rem;
 }
 
-.noborder {
+.modal-dialog,
+.modal-content {
+    height: 100%;
+}
+
+.modal-body {
+    max-height: calc(100% - 120px);
+    overflow-y: scroll;
+}
+
+#map {
+  height: 100%;
+}
+
+.ex-square {
+  width: 325px;
+  height: 325px;
+}
+
+.ex-square-info {
+  width: 325px;
+  height: auto;
+  min-height: 325px;
+}
+
+.ex-img {
+  height: auto;
+  width: 100%;
+  max-height: 325px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.front-pic {
+  max-width: 195px;
+}
+
+.smallText {
+  font-size: 0.97rem;
+}
+
+#ex-food {
+
+  background-color: #293039;
+  border: 8px solid #a52a2a;
+}
+
+.head {
   border: none;
-  width:250px;
-  margin-top: 20px;
 }
 
-.customer-text {
-  height: 200px;
-  width: auto;
+#card-rest-text {
+  height: 40px;
 }
+
+#restCard {
+  padding: 0;
+}
+
+
+/* Footer */
 
 .footer {
   position: relative;
@@ -142,10 +216,31 @@ p {
   height: 100px;
 padding-top: 20px;
 }
-body {
-  background-color: brown
+
+
+/* --- About --- */
+
+.aboutBanner {
+  background-image: url(../images/webBanner.png);
+  background-size: cover;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
 }
 
-#career-row {
-  border-radius: 5px;
+
+/* --- Contact --- */
+
+.contactBanner {
+  background-image: url(../images/webBanner.png);
+  background-size: cover;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  flex-wrap:wrap;
 }
+
+
