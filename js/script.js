@@ -145,7 +145,7 @@ $(document).ready(function () {
     
     var $restCard = $("<div class='card zeroBorder card-body' id='restCard'>")
 
-    var $restName = $("<h4 class='mt-3 text-center'></h4>").text(storeName)
+    var $restName = $("<h4 class='mt-4 text-center'></h4>").text(storeName)
     var $address = $("<h5 class='mt-1 text-center'></h5>").text(address)
     var $cityZip = $("<h5 class='mt-1 text-center'></h5>").text(cityZip)
     var $phone = $("<h5 class='mt-1 text-center'></h5>").text(phone)
