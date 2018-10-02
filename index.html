@@ -4,29 +4,25 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="css/style.css">
-  <title>Rate My Plate!</title>
-
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <title>Rate My Plate</title>
 
-
 </head>
 
 <body>
-
+  <!-- Jumbotron -->
   <div class="jumbotron mb-0">
     <img id='main-logo' src="images/logo.png">
   </div>
 
-
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-      aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+      aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -45,42 +41,44 @@
     </div>
   </nav>
 
-  <div class="container mt-4 customer-container text-center">
+  <!-- Manager/Chef/Foodie Section -->
+  <div class="container mt-4  customer-container text-center">
+    <div class='card d-inline-block head m-3' style='width: 19rem'>
+      <img src="images/manager.jpg" class="front-pic">
+      <p class="customer-text mt-3"> Customer satisfaction is of the utmost importance for a restaurant manager, and
+        now
+        that I know exactly how my customers feel about our selections, I can work even harder to preserve a high
+        reputation for our guests!"<br><br><em>Mark F.
+        </em></p>
+    </div>
+
+    <div class='card d-inline-block head m-3' style='width: 19rem'>
+      <img src="images/chef.jpg" class="front-pic">
+
+      <p class="customer-text mt-3"> As a chef, I take a great deal of pride in my food. Not only the taste of it, but
+        the
+        texture, presentation and <em>Mouthfeel</em> of each dish. Rate My Plate keeps my staff honest, guaranteeing a
+        quality product every single
+        time." <br><br><em>John G.</em></p>
+
+    </div>
+
+    <div class='card d-inline-block head m-3' style='width: 19rem'>
+      <img src="images/customer.jpg" class="front-pic">
+
+      <p class="customer-text mt-3"> Foodies rejoice! This is the app we've all been waiting for! We can now explore
+        and
+        find the best dishes and drinks around, all at the click of a button. Hmmm, I wonder what spot my friends and I
+        should try next..." <br><br><em>Chehlsee C.</em></p>
+
+    </div>
 
 
 
 
-      <div class='card d-inline-block  noborder m-3' style='width: 18rem'>
-        <img src="images/manager.jpg">
-        <div class="customer-text mt-2">
-          <p>"Customer satisfaction is of the utmost importance for a restaurant manager, and now that I know exactly how my customers feel about our selections, I can work even harder to preserve a high reputation for our guests!"<br><br><em>Mark F.</em></p>
-        </div>
-      </div>
+  </div>
 
-
-      <div class='card d-inline-block noborder m-3' style='width: 18rem'>
-        <img src="images/chef.jpg">
-        <div class="customer-text mt-2">
-            <p>"As a chef, I take a great deal of pride in my food. Not only the taste of it, but the texture, presentation and <em>Mouthfeel</em> of each dish. Rate My Plate keeps my staff honest, guaranteeing a quality product every single time." <br><br><em>John G.</em></p>
-
-        </div>
-      </div>
-
-
-      <div class='card d-inline-block noborder m-3' style='width: 18rem'>
-        <img src="images/customer.jpg">
-        <div class="customer-text mt-2">
-            <p>"Foodies rejoice! This is the app we've all been waiting for! We can now explore and find the best dishes and drinks around, all at the click of a button. Hmmm, I wonder what spot my friends and I should try next..."<br><br><em>Chehlsee C.</em></p>
-
-        </div>
-      </div>
-
-
-
-
-</div>
-
-
+  <!-- Search -->
   <div class="container mt-4">
     <div class="row">
       <div class="col-12">
@@ -104,28 +102,28 @@
               </div>
 
               <div class="form-row">
-                <div class="col-md-4 mb-3">
-                  <label for="radius">Radius from location:</label><br>
+                <div class="col-md-3 mb-3">
+                  <label for="radius">Radius from location (miles):</label><br>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radius" id="radius" value="8046.72">
-                    <label class="form-check-label" for="inlineRadio2">5 mi.</label>
+                    <label class="form-check-label" for="inlineRadio2">5</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radius" id="radius" value="16093.4">
-                    <label class="form-check-label" for="inlineRadio2">10 mi.</label>
+                    <label class="form-check-label" for="inlineRadio2">10</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radius" id="radius" value="24140.2">
-                    <label class="form-check-label" for="inlineRadio2">15 mi.</label>
+                    <label class="form-check-label" for="inlineRadio2">15</label>
                   </div>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="radius" id="radius" value="32186.9">
-                    <label class="form-check-label" for="inlineRadio2">20 mi.</label>
+                    <label class="form-check-label" for="inlineRadio2">20</label>
                   </div>
 
                 </div>
 
-                <div class="col-md-4 mb-3">
+                <div class="col-md-3 mb-3">
                   <label for="results-limit">Results Limit:</label><br>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="results" id="results" value="10">
@@ -149,7 +147,7 @@
                   </div>
                 </div>
 
-                <div class="col-md-4 mb-3">
+                <div class="col-md-3 mb-3">
                   <label for="price">Price:</label><br>
                   <div class="form-check form-check-inline">
                     <input class="form-check-input" type="checkbox" name="price" id="price" value="1">
@@ -168,158 +166,180 @@
                     <label class="form-check-label" for="inlineCheckbox2">$$$$</label>
                   </div>
                 </div>
-              </div>
 
-              <div class="form-row col-12">
-                <button type="submit" class="btn btn-block btn-outline-success" id="submit-search">Submit</button>
+                <div class="col-md-3 mb-3">
+                  <button type="submit" class="btn btn-block btn-outline-success" id="submit-search">Submit</button>
+                </div>
+
               </div>
 
               <div class="row mt-3">
-                <div class="col-12 text-center p-0" id="store-results">
-                </div>
+                <div class="col-12 text-center p-0" id="store-results"></div>
+              </div>
 
             </form>
-
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12">
-
-          <div class="row card-body">
-
-
           </div>
         </div>
       </div>
     </div>
-
-
-    <div class="container text-center pt-3" id="review-section"></div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="submit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-
-      <div class="modal-dialog" role="document">
-
-        <div class="modal-content">
-
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Review Submission</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-
-          <div class="modal-body">
-
-            <form id="search-form">
-
-              <div class="form-group">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="submit-item-category" id="submit-item-category" value="food" required>
-                  <label class="form-check-label" for="food">Food</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="submit-item-category" id="submit-item-category" value="drink" required>
-                  <label class="form-check-label" for="drink">Drink</label>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="submit-item-name">Item Name:</label>
-                <input type="text" class="form-control" id="submit-item-name" aria-describedby="submit-item-name" placeholder="JD Burger, Shrimp Tempura Roll, Chicken Piccatta Pasta"
-                  required>
-              </div>
-
-              <div class="form-group">
-                <label for="submit-item-rating">Rating:</label><br>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="1" required>
-                  <label class="form-check-label" for="inlineRadio1">1 (Worst)</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="2" required>
-                  <label class="form-check-label" for="inlineRadio2">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="3" required>
-                  <label class="form-check-label" for="inlineRadio2">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="4" required>
-                  <label class="form-check-label" for="inlineRadio2">4 (Best)</label>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="submit-item-description">Basic Description:</label>
-                <textarea class="form-control" id="submit-item-description" rows="3" placeholder="Provide a short description of the item."
-                  required></textarea>
-              </div>
-
-              <div class="form-group">
-                <label for="submit-item-review">Personal Review:</label>
-                <textarea class="form-control" id="submit-item-review" rows="3" placeholder="Give a detailed review on the item." required></textarea>
-              </div>
-
-              <div class="form-group">
-                <label for="mouthfeel-options">Mouthfeel options (Choose 3):<br>
-                  <em id="caption">Hold CTRL or CMD to select multiple</em></label>
-                <select multiple class="form-control" id="mouthfeel-options" required>
-                  <option value="Salty">Salty</option>
-                  <option value="Crunchy">Crunchy</option>
-                  <option value="Mild">Mild</option>
-                  <option value="Moist">Moist</option>
-                  <option value="Tart">Tart</option>
-                  <option value="Sweet">Sweet</option>
-                  <option value="Bland">Bland</option>
-                  <option value="Hot">Hot</option>
-                  <option value="Warm">Warm</option>
-                  <option value="Savory">Savory</option>
-                  <option value="Complex">Complex</option>
-                  <option value="Simple">Simple</option>
-                  <option value="Strong">Strong</option>
-                  <option value="Juicy">Juicy</option>
-                  <option value="Sour">Sour</option>
-                </select>
-              </div>
-
-              <div class="form-group mb-0">
-                <input id="file-upload" type="file" multiple onchange="processSelectedFiles(this)">
-              </div>
-
-            </form>
-
-          </div>
-
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-block btn-outline-success" data-dismiss="modal" id="submit-item-form">Submit</button>
-            <button type="reset" class="btn btn-block btn-outline-danger mt-0" id="clear-item-form">Clear</button>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-
-
-</div>
-
-  <div class="container-fluid footer">
-    <p>Rate My Plate</p>
-    <p>&copy; Copyright 2018</p>
   </div>
 
+  <!-- Results Container -->
+  <div class="container text-center mt-4 pt-3" id="review-section"></div>
 
+  <!-- Review Submission Modal -->
+  <div class="modal fade" id="submit-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  
+  <div class="modal-dialog" role="document">
+    
+    <div class="modal-content">
+      
+      <div class="modal-header">
+        <h5 class="modal-title" id="ex-title">Review Submission</h5>
+        
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      
+      <div class="modal-body">
+        
+        <form id="search-form">
+          
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="submit-item-category" id="submit-item-category"
+              value="food" required>
+              <label class="form-check-label" for="food">Food</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="submit-item-category" id="submit-item-category"
+              value="drink" required>
+              <label class="form-check-label" for="drink">Drink</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="submit-item-name">Item Name (As it appears on the menu - if possible):</label>
+            <input type="text" class="form-control" id="submit-item-name" aria-describedby="submit-item-name"
+            placeholder="JD Burger, Shrimp Tempura Roll, Chicken Piccatta Pasta" required>
+          </div>
+          
+          
+          <div class="form-group">
+            <label for="submit-item-description">Detailed Description:</label>
+            <textarea class="form-control" id="submit-item-description" rows="3" placeholder="Ingredients, presentation, history"
+            required></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="submit-item-review">Overall Experience:</label>
+            <textarea class="form-control" id="submit-item-review" rows="3" placeholder="Include mouthfeel, taste, aroma, texture, etc."
+            required></textarea>
+          </div>
+          
+          
+          <div class="form-group mb-0">
+            <input id="file-upload" type="file" multiple onchange="processSelectedFiles(this)">
+          </div>
+          
+          <div class="form-group mt-3">
+            <label for="submit-item-rating">Rating:</label><br>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="1"
+              required>
+              <label class="form-check-label" for="inlineRadio1">1</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="2"
+              required>
+              <label class="form-check-label" for="inlineRadio2">2</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="3"
+              required>
+              <label class="form-check-label" for="inlineRadio2">3</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="submit-item-rating" id="submit-item-rating" value="4"
+              required>
+              <label class="form-check-label" for="inlineRadio2">4 (Best)</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="mouthfeel-options">Mouthfeel options (Choose 3):<br>
+              <em id="caption">Hold CTRL or CMD to select multiple</em></label>
+              <select multiple class="form-control" id="mouthfeel-options" required>
+                <option value="Salty">Salty</option>
+                <option value="Crunchy">Crunchy</option>
+                <option value="Mild">Mild</option>
+                <option value="Moist">Moist</option>
+                <option value="Tart">Tart</option>
+                <option value="Sweet">Sweet</option>
+                <option value="Bland">Bland</option>
+                <option value="Hot">Hot</option>
+                <option value="Warm">Warm</option>
+                <option value="Savory">Savory</option>
+                <option value="Complex">Complex</option>
+                <option value="Simple">Simple</option>
+                <option value="Strong">Strong</option>
+                <option value="Juicy">Juicy</option>
+                <option value="Sour">Sour</option>
+              </select>
+            </div>
+          </form>
+          
+        </div>
+        
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-block btn-outline-success" data-dismiss="modal" id="submit-item-form">Submit</button>
+          <button type="reset" class="btn btn-block btn-outline-danger mt-0" id="clear-item-form">Clear</button>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
 
+  <!-- Extended Card Modal -->
+  <div class="modal fade" id="ex-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="foodTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span id="closeOut" aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container big-card">
+          <div class="row justify-content-center align-items-center">
+            <div class="ex-square m-2" id="ex-food">
+              <img class="ex-img" src="#">
+            </div>
+            <div class="ex-square m-2" id="ex-map">
+              <div id="map"></div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="ex-square-info m-2" id="ex-info"></div>
+            <div class="ex-square m-2" id="ex-store"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<!-- Footer -->
+<div class="container-fluid footer">
+  <p>Rate My Plate</p>
+  <p>&copy; Copyright 2018</p>
+</div>
 
   <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.4.1/firebase-database.js"></script>
@@ -327,188 +347,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFltpLjZxXtL3fdE_GXEVqpJ9S1WCPpaI&callback=initMap"
+    async defer></script>
   <script src="./js/firebaseReviews.js"></script>
-
-  <script type="text/javascript">
-
-
-    var reviewIdCount = 0;
-    var currentSelection = {}
-
-
-
-    function apiCall(searchItems) {
-
-      //var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + "sushi" + "&location=" + "toms+river" + "&radius=" + 10000 + "&limit=" + 10 + "&price=" + 2;
-      var queryURL = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + searchItems.keyword + "&location=" + searchItems.location + "&radius=" + searchItems.radiusSelected + "&limit=" + searchItems.resultsSelected + "&price=" + searchItems.priceSelected;
-
-      $.ajax({
-        url: queryURL,
-        method: "GET",
-        headers: {
-          "Authorization": "Bearer 2VxyWI6FPmn6irj6VKvlO6GWV0pNBEf5Efh89Mki_C5OmrAlqtY4kLYhkrsnKnm2U6vqZHq5a8Yh1hHu4FfcNHVej_aYkyeXI9xEMqzr-KQ0_EAU-EhBaQy4NIeiW3Yx",
-          "Access-Control-Allow-Origin": "*"
-        }
-      }).then(function (response) {
-
-        console.log(response)
-
-        for (var i = 0; i < response.businesses.length; i++) {
-          var name = response.businesses[i].name;
-          var address = response.businesses[i].location.display_address[0];
-          var cityOnly = response.businesses[i].location.city;
-          var stateOnly = response.businesses[i].location.state;
-          var zipOnly = response.businesses[i].location.zip_code;
-          var categories = response.businesses[i].categories;
-          var categoriesArray = [];
-          var price = response.businesses[i].price;
-          var distance = response.businesses[i].distance;
-
-          for (var j = 0; j < categories; j++) {
-            categoriesArray.push(categories[j].title);
-          }
-
-          var $restaurantDiv = $("<div class='card d-inline-block m-1' style='width: 16rem;'>");
-          var $cardBodyText = $("<div class='card-body card-text p-2 mb-3' id='rest-card-text'>");
-          var $cardBodyButton = $("<div class='card-body card-button text-center pt-0'>");
-
-          var $name = $("<h5 class='card-title text-center mb-0' id='store-name'>").text(name);
-          var $address = $("<p class='card-text'>").text(address);
-          var $city = $("<p class='card-text'>").text(cityOnly + ", " + stateOnly + " " + zipOnly);
-          var $categoriesArray = $("<p class='card-text'>").text(categoriesArray.join(", "));
-          var $price = $("<p class='card-text'>").text(price);
-          var $distance = $("<p class='card-text'>").text(metersToMiles(distance) + " miles");
-          var $reviewButton = $("<button type='button' class='btn btn-secondary btn-sm btn-block' id='review-button' data-toggle='modal' data-target='#submit-modal'>Submit Review!</button>");
-
-          $($cardBodyText).append($name, $address, $city, $categoriesArray, $price, $distance);
-          $($cardBodyButton).append($reviewButton);
-          $($restaurantDiv).append($cardBodyText, $cardBodyButton);
-          $("#store-results").append($restaurantDiv);
-        }
-
-        function metersToMiles(meters) {
-          var m = parseFloat(meters);
-          var mi = "";
-          if (!isNaN(m)) {
-            mi = Math.round((m * 0.00062137119) * 10) / 10;
-          }
-          return mi;
-        }
-      });
-    }
-
-
-    function processSelectedFiles(fileInput) {
-      var file = fileInput.files[0];
-      // Get a reference to the location where we'll store our photos
-
-      photoRef = firebase.storage().ref().child('photos').child(file.name);
-      // Upload file to Firebase Storage
-
-      var uploadTask = photoRef.put(file).then(function (snapshot) {
-        console.log('Uploaded a blob or file!');
-      });
-
-    }
-
-
-
-    $(document).ready(function () {
-
-      $("#clear-search").click(function (event) {
-        $("#store-results").text("");
-      });
-
-      $("#submit-search").on("click", function () {
-
-        $("#store-results").text("")
-
-        event.preventDefault();
-
-        var priceSelectedArray = [];
-        $("input:checkbox[name='price']:checked").each(function (i) {
-          priceSelectedArray[i] = $(this).val();
-        })
-
-        var searchItems = {
-          keyword: $("#keyword").val(),
-          location: $("#location").val(),
-          radiusSelected: Math.floor($("input:radio[name='radius']:checked").val()),
-          resultsSelected: $("input:radio[name='results']:checked").val(),
-          priceSelected: priceSelectedArray
-        }
-
-        apiCall(searchItems);
-
-      })
-
-      $(document).on("click", "#review-button", function () {
-        currentSelection = {};
-
-
-        currentSelection.restaurant = $(this).parent().parent()[0].childNodes[0].children[0].innerHTML
-        currentSelection.cityState = $(this).parent().parent()[0].childNodes[0].children[2].innerHTML.replace(/[0-9]/g, '').trim();
-      })
-
-      $("#submit-item-form").on("click", function (event) {
-
-        event.preventDefault();
-
-        var itemName = $("#submit-item-name").val().trim();
-        var foodDrink = $("input:radio[name='submit-item-category']:checked").val();
-        var rating = $("input:radio[name='submit-item-rating']:checked").val();
-        var description = $("#submit-item-description").val()
-        var review = $("#submit-item-review").val().trim();
-        var mfOptions = $("#mouthfeel-options").val();
-
-        //database
-        currentSelection.review = review,
-          currentSelection.description = description,
-          currentSelection.foodDrink = foodDrink,
-          currentSelection.reviewID = reviewIdCount,
-
-          //for the card
-          currentSelection.itemName = itemName,
-          currentSelection.options = mfOptions.join(", "),
-          currentSelection.rating = rating,
-
-
-
-
-          photoRef.getDownloadURL().then(function (url) {
-            currentSelection.url = url
-            database.ref().push(currentSelection);
-          })
-
-        // reviewIdCount++;
-        // console.log(reviewIdCount)
-
-
-        $('input[name="submit-item-category"]').prop('checked', false);
-        $('input[name="submit-item-rating"]').prop('checked', false);
-        $("#submit-item-name").val("");
-        $("#submit-item-description").val("");
-        $("#submit-item-review").val("");
-        $("#mouthfeel-options").val("");
-        $("#file-upload").val("");
-
-
-
-      });
-
-      $("#clear-item-form").on("click", function () {
-        $('input[name="submit-item-category"]').prop('checked', false);
-        $('input[name="submit-item-rating"]').prop('checked', false);
-        $("#submit-item-name").val("");
-        $("#submit-item-description").val("");
-        $("#submit-item-review").val("");
-        $("#mouthfeel-options").val("");
-        $("#file-upload").val("");
-      })
-
-    });
-
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 
